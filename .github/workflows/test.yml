@@ -1,0 +1,20 @@
+name: Test Email Step
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual triggering from GitHub Actions tab
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 23f1000054@ds.study.iitm.ac.in  # This step contains your email
+        run: echo "Hello, world!"
+
+      - name: Confirm Success
+        run: echo "GitHub Actions executed successfully!"
